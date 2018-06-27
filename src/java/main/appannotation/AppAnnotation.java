@@ -1,5 +1,6 @@
 package main.appannotation;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -11,7 +12,7 @@ import java.util.Map;
 @Component("app")
 public class AppAnnotation {
 
-    @Value("#{client}")
+    @Autowired
     private Client client;
     @Value("#{dbLogger}")
     private EventLogger defaultLogger;
